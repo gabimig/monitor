@@ -1,9 +1,8 @@
 import React from 'react'
-import {
-    Button, Grid, Paper,
-} from '@material-ui/core'
+import { Button, Grid } from '@material-ui/core'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { useDispatch, useSelector } from 'react-redux'
+import PaperLabeled from 'paperlabeled-material-ui'
 import { sessionInfoSelector, setState } from '../../storage/testSlice'
 
 const useStyles = makeStyles(() => createStyles({
@@ -13,6 +12,7 @@ const useStyles = makeStyles(() => createStyles({
     placeHolder: {
         textAlign: 'center',
     },
+    labelStyle: { marginTop: -43 },
 }))
 
 const Report = (): React.ReactElement => {
@@ -29,7 +29,7 @@ const Report = (): React.ReactElement => {
                 <h2>Report Page Placeholder:<br />state= {testState}</h2>
             </Grid>
             <Grid item xs={4} className={classes.placeHolder}>
-                <Paper>
+                <PaperLabeled title="title" labelComp={<h3>Title</h3>} labelClassContainer={classes.labelStyle}>
                     <Grid container justify="center" spacing={2}>
                         <Grid item>
                             <Button color="primary" variant="contained" onClick={handleOnChange('report-state 1')}>
@@ -47,7 +47,7 @@ const Report = (): React.ReactElement => {
                             </Button>
                         </Grid>
                     </Grid>
-                </Paper>
+                </PaperLabeled>
             </Grid>
         </Grid>
     )

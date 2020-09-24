@@ -3,7 +3,7 @@ import { testReducer } from './testSlice'
 
 const store = configureStore({
     reducer: {
-        test: testReducer,
+        metrics: testReducer,
     },
     devTools: process.env.NODE_ENV !== 'production',
 })

@@ -1,16 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+export type Metric = {value: number, date: Date}
+
+const initState: Metric[] = []
+
 export const {
     actions: {
-        setState,
+        setMetrics,
     },
     reducer: testReducer,
 } = createSlice({
-    name: 'test',
-    initialState: 'init-state',
+    name: 'Metrics',
+    initialState: initState,
     reducers: {
-        setState: (state, { payload }) => payload,
+        setMetrics: (state, { payload }) => payload,
     },
 })
 
-export const sessionInfoSelector = ({ test }: { test: string }): string => test
+export const metricsSelector = ({ metrics }: { metrics: Metric[] }): Metric[] => metrics

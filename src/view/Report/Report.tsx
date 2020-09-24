@@ -3,7 +3,7 @@ import { Button, Grid } from '@material-ui/core'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { useDispatch, useSelector } from 'react-redux'
 import PaperLabeled from 'paperlabeled-material-ui'
-import { sessionInfoSelector, setState } from '../../storage/testSlice'
+import { metricsSelector, setMetrics } from '../../storage/testSlice'
 
 const useStyles = makeStyles(() => createStyles({
     container: {
@@ -18,9 +18,9 @@ const useStyles = makeStyles(() => createStyles({
 const Report = (): React.ReactElement => {
     const classes = useStyles()
     const dispatch = useDispatch()
-    const testState = useSelector(sessionInfoSelector)
+    const testState = useSelector(metricsSelector)
     const handleOnChange = (value: string) => () => {
-        dispatch(setState(value))
+        dispatch(setMetrics(value))
     }
 
     return (

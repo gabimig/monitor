@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { useSelector } from 'react-redux'
-import { sessionInfoSelector } from '../../storage/testSlice'
+import { metricsSelector } from '../../storage/testSlice'
 
 const useStyles = makeStyles(() => createStyles({
     container: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => createStyles({
 
 const Settings = (): React.ReactElement => {
     const classes = useStyles()
-    const testState = useSelector(sessionInfoSelector)
+    const testState = useSelector(metricsSelector)
 
     return (
         <Grid container>

@@ -18,36 +18,11 @@ const useStyles = makeStyles(() => createStyles({
 const Report = (): React.ReactElement => {
     const classes = useStyles()
     const dispatch = useDispatch()
-    const testState = useSelector(metricsSelector)
-    const handleOnChange = (value: string) => () => {
-        dispatch(setMetrics(value))
-    }
 
     return (
         <Grid container justify="center">
             <Grid item xs={12} className={classes.placeHolder}>
-                <h2>Report Page Placeholder:<br />state= {testState}</h2>
-            </Grid>
-            <Grid item xs={4} className={classes.placeHolder}>
-                <PaperLabeled title="title" labelComp={<h3>Title</h3>} labelClassContainer={classes.labelStyle}>
-                    <Grid container justify="center" spacing={2}>
-                        <Grid item>
-                            <Button color="primary" variant="contained" onClick={handleOnChange('report-state 1')}>
-                                ReportState 1
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button color="secondary" variant="contained" onClick={handleOnChange('report-state 2')}>
-                                ReportState 2
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button variant="contained" onClick={handleOnChange('report-state 3')}>
-                                ReportState 3
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </PaperLabeled>
+                <h2>Report Page Placeholder:</h2>
             </Grid>
         </Grid>
     )

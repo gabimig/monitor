@@ -41,7 +41,7 @@ const ProductionTable = ({ production }: ProductionTableProps): React.ReactEleme
         }
 
         const element = (
-            <TableRow>
+            <TableRow key={i}>
                 <StyledTableCell align="center">{name}</StyledTableCell>
                 <StyledTableCell align="center">{weight}</StyledTableCell>
             </TableRow>

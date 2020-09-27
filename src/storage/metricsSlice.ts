@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export type Metric = {value: number, date: Date}
+export type Metric = {value: number, date: number}
 
 const initState: Metric[] = []
 
@@ -8,7 +8,7 @@ export const {
     actions: {
         setMetrics,
     },
-    reducer: testReducer,
+    reducer: metricReducer,
 } = createSlice({
     name: 'Metrics',
     initialState: initState,

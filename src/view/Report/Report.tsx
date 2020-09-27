@@ -3,7 +3,7 @@ import { Button, Grid } from '@material-ui/core'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { useDispatch, useSelector } from 'react-redux'
 import PaperLabeled from 'paperlabeled-material-ui'
-import { metricsSelector, setMetrics } from '../../storage/testSlice'
+import { metricsSelector, setMetrics } from '../../storage/metricsSlice'
 
 const useStyles = makeStyles(() => createStyles({
     container: {

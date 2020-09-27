@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { testReducer } from './testSlice'
+import { metricReducer } from './metricsSlice'
+import { productionReducer } from './productionSlice'
 
 const store = configureStore({
     reducer: {
-        metrics: testReducer,
+        metrics: metricReducer,
+        production: productionReducer,
     },
     devTools: process.env.NODE_ENV !== 'production',
 })

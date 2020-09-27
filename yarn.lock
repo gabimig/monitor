@@ -3312,6 +3312,18 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
+collapsable-panel@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/collapsable-panel/-/collapsable-panel-1.0.2.tgz#5cfd27a76117ec40d0d8c513c4c5bde1a5efd43a"
+  integrity sha512-NOMR+YaVt0cIweyDtNM4pJaYYetZNf3ckQOR96TRq9kb0si5mcJQVeX30ZT9oXx/9NOYelGDLnTJFFnijaOpww==
+  dependencies:
+    "@material-ui/core" "^4.11.0"
+    "@material-ui/icons" "^4.9.1"
+    "@testing-library/react" "^11.0.4"
+    "@types/node" "^14.10.1"
+    "@types/react" "^16.9.49"
+    react "^16.13.1"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"

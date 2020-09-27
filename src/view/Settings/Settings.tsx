@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { useSelector } from 'react-redux'
-import { metricsSelector } from '../../storage/testSlice'
+import { metricsSelector } from '../../storage/metricsSlice'
 
 const useStyles = makeStyles(() => createStyles({
     container: {

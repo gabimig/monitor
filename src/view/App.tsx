@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import {
-    createStyles, makeStyles, Theme,
+    createStyles, Grid, makeStyles, Theme,
 } from '@material-ui/core'
 import {
     BrowserRouter, Link, Route, Switch,
@@ -27,8 +27,6 @@ const useStyles = makeStyles((th: Theme) => createStyles({
         paddingTop: theme.spacing(8),
         position: 'absolute',
         left: 0,
-        width: '100%',
-
     },
     toolbar: th.mixins.toolbar,
     linkText: {
@@ -76,14 +74,13 @@ const App = (): React.ReactElement => {
                     <BrowserRouter>
                         <Header handleMenuClick={() => setSidebarOpen(!sideBarOpen)} />
                         <SideMenu menuItems={menuItems} />
-                        <div className={classes.content}>
+                        <Grid container className={classes.content}>
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route exact path="/Report" component={Report} />
                                 <Route exact path="/Settings" component={Settings} />
                             </Switch>
-                        </div>
-
+                        </Grid>
                     </BrowserRouter>
                 </div>
             </ThemeProvider>
